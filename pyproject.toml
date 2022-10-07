@@ -10,6 +10,8 @@ packages = [{include = "player_scoreboard_api", from="src"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.85.0"
+uvicorn = "^0.18.3"
+dependency-injector = "^4.40.0"
 
 [tool.poetry.group.test.dependencies]
 pylint = "^2.15.3"
