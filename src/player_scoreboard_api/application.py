@@ -1,5 +1,6 @@
 import logging
 import fastapi
+from starlette.types import Scope, Receive, Send
 from dependency_injector import wiring, providers
 
 from .version import VERSION
@@ -49,10 +50,15 @@ class Application:
         self._init_fastapi()
         self._init_container()
 
+    async def __call__(self, scope: Scope, receive: Receive, send: Send) -> None:
+        if self._fastapi.root_path:
+            scope["root_path"] = self._fastapi.root_path
+        await self._fastapi.__call__(scope, receive, send)
+
     async def _on_startup(self):
         logger.debug("ON_STARTUP")
-        await self._container.init_resources()
+        #await self._container.init_resources()
 
     async def _on_shutdown(self):
         logger.debug("ON_SHUTDOWN")
-        await self._container.shutdown_resources()
+        #await self._container.shutdown_resources()
