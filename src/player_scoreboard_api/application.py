@@ -17,9 +17,7 @@ logger = logging.getLogger(__package__)
 class Application:
 
     name: str = "Player Scoreboard Api"
-    description: str = """
-        Player Scoreboard Api
-    """
+    description: str = """Player Scoreboard Api"""
 
     _fastapi: fastapi.FastAPI
     _container = None
