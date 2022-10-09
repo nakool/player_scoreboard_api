@@ -41,6 +41,8 @@ class Application:
             func=self._on_shutdown
         )
 
+        self._fastapi.include_router(api_router)
+
     def _init_container(self) -> None:
         from .container import Container
         self._container = Container(
