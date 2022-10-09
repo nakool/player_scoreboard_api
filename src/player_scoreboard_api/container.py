@@ -2,6 +2,7 @@ from dependency_injector import containers, providers
 
 
 
+from .service.health import HealthService
 
 class Container(containers.DeclarativeContainer):
 
@@ -12,3 +13,5 @@ class Container(containers.DeclarativeContainer):
     )
 
     application = providers.Dependency()
+
+    health_service: HealthService = providers.Singleton(HealthService)
