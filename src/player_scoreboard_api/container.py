@@ -1,9 +1,9 @@
 from dependency_injector import containers, providers
 
 
-
 from .service.health import HealthService
-from .service.player_service import PlayerService
+from .service.player import PlayerService
+
 
 class Container(containers.DeclarativeContainer):
 
