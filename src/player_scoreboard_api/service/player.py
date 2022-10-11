@@ -3,6 +3,8 @@ import logging
 from typing import Dict, List
 
 from ..model.player import Player
+from ..model.player import Score
+
 
 logger = logging.getLogger(__package__)
 
@@ -21,6 +23,16 @@ class PlayerService():
                 name=name,
                 date_creation=datetime.now(),
                 score_list=list()
+            )
+            return True
+        else:
+            return False
+
+    def add_player_score(self, player: Player, score: Score) -> bool:
+        """ Add a Score for the Player in the internal storage of PlayerService """
+        if self.players.get(player.name, None) is not None:
+            self.players[player.name].score_list.append(
+                score
             )
             return True
         else:
