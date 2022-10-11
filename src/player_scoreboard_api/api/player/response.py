@@ -4,7 +4,6 @@ from pydantic import BaseModel
 
 class PlayerAddResponse(BaseModel):
     added: bool
-    name: str
 
 
 class PlayerListResponse(BaseModel):
