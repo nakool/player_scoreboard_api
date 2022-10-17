@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Py: run",
+            "type": "python",
+            "request": "launch",
+            "module": "player_scoreboard_api",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceRoot}",
+            "justMyCode": true,
+            "args": [],
+            "env": {},
+            "preLaunchTask": "build-application"
+        }
+    ]
+}

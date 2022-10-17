@@ -1,0 +1,50 @@
+{
+    "python.defaultInterpreterPath": ".venv/bin/python",
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/*.pyc": {
+            "when": "$(basename).py"
+        },
+        "**/__pycache__": true,
+        "**/.pytest_cache": true,
+    },
+    "python.terminal.activateEnvironment": true,
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/src/:${workspaceFolder}/test/:${env:PYTHONPATH}",
+        "PATH": "${workspaceFolder}/src/:${workspaceFolder}/test/:${env:PATH}"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src/:${workspaceFolder}/test/:${env:PYTHONPATH}",
+        "PATH": "${workspaceFolder}/src/:${workspaceFolder}/test/:${env:PATH}"
+    },
+    "python.envFile": "${workspaceFolder}/.env",
+    "python.analysis.autoSearchPaths": true,
+    "python.analysis.extraPaths": [
+        "./src/",
+        "./test/"
+    ],
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--load-plugins pylint_pydantic"
+    ],
+    "python.linting.lintOnSave": true,
+    "python.linting.pylintEnabled": true,
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "test"
+    ],
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "BUG",
+        "TODO-TEST"
+    ],
+    "editor.formatOnSaveMode": "file",
+    "editor.formatOnSave": true
+}

@@ -1,0 +1,13 @@
+{
+    "recommendations": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "visualstudioexptteam.vscodeintellicode",
+        "eamodio.gitlens",
+        "ms-azuretools.vscode-docker",
+        "ryanluker.vscode-coverage-gutters",
+        "actboy168.tasks",
+        "pkief.material-icon-theme",
+        "exiasr.hadolint"
+    ]
+}
