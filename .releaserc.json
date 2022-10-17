@@ -1,6 +1,6 @@
 {
     "branches": [
-        "main"
+        "master"
     ],
     "plugins": [
         "@semantic-release/github",
@@ -24,7 +24,8 @@
             {
                 "assets": [
                     "CHANGELOG.md",
-                    "src/application/version.py"
+                    "src/application/version.py",
+                    "pyproject.toml"
                 ],
                 "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
             }
